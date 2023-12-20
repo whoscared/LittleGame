@@ -42,7 +42,7 @@ let allQuestions = [
 //let allQuestions = ["Перетащите всех крокодилов в водоем", "Найдите все слова на букву А", "Перенесите все слова, начинающиеся с гласной в красный контейнер, с согласной - в синий"];
 let currentTest = -1;
 let cuurentLevel = 0;
-let maxScoreOnTests = [[3,3],[5,6],[6,6]];
+let maxScoreOnTests = [[3,3],[5,6],[8,8]];
 let testCounter = 0;
 let result_value = 0;
 let timerInterval;
@@ -194,6 +194,45 @@ function testLevel() {
 
     allQuestions[currentTest].readyQuestions[level] = true;
 
+    if (currentTest == 1) {
+        secondTest.innerHTML = `        <img id="wathermelon" class="withA food test-2-item" " src="./img/test2/wathermelon.png">
+        <img id="guava" class="food test-2-item" src="./img/test2/guava.png">
+        <img id="croissant" class="food test-2-item"  src="./img/test2/croissant.png">
+        <img id="bus"class="withA test-2-item" src="./img/test2/bus.png">
+        <img id="orange" class="food withA test-2-item" src="./img/test2/orange.png">
+        <img id="pineapple" class="food withA test-2-item" src="./img/test2/pineapple.png">
+        <img id="pumpkin" class="food test-2-item" src="./img/test2/pumpkin.png">
+        <img id="shark" class="withA test-2-item"  src="./img/test2/shark.png">`;
+
+        var elements = document.querySelectorAll('img.test-2-item');
+        elements.forEach(function(element) {
+            element.addEventListener('click', function() {
+            //element.classList.add('one_click');
+            element.style.display = 'none';
+        });
+
+        var elements = document.querySelectorAll('img.withA');
+        elements.forEach(function(element) {
+            element.addEventListener('click', function() {
+                if (!(element.classList.contains('one_click_0')) && cuurentLevel == 0) {       
+                    element.classList.add('one_click_0');
+                    addScopeCount();
+                }
+            });
+        });
+    
+        var elements = document.querySelectorAll('img.food');
+        elements.forEach(function(element) {
+            element.addEventListener('click', function() {
+                if (!(element.classList.contains('one_click_1')) && cuurentLevel == 1) {
+                    element.classList.add('one_click_1');
+                    addScopeCount();
+                }
+            });
+        });
+    });
+    }
+
     if (currentTest == 2 && 
     (allQuestions[currentTest].readyQuestions[0] == true || allQuestions[currentTest].readyQuestions[1] == true)) {
         thirdTest.innerHTML= ` <div class="section" id="section-1" ondragstart="dragStart(event)" ondragover="dragOver(event)" ondrop="dragDropWord(event)">
@@ -335,13 +374,13 @@ function dragStart(event) {
 
 //Как только контент загрузился добавляем для всех элементов второго теста исчезновение после клика
 document.addEventListener('DOMContentLoaded', function() {
-    // var elements = document.querySelectorAll('img.test-2-item');
-    //     elements.forEach(function(element) {
-    //         element.addEventListener('click', function() {
-    //         //element.classList.add('one_click');
-    //         //element.style.display = "none";
-    //     });
-    // });
+    var elements = document.querySelectorAll('img.test-2-item');
+        elements.forEach(function(element) {
+            element.addEventListener('click', function() {
+            //element.classList.add('one_click');
+            element.style.display = 'none';
+        });
+    });
     
     //Добавляем очки при нажатии на объект с классом withA
     var elements = document.querySelectorAll('img.withA');
