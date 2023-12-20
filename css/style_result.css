@@ -63,3 +63,8 @@
     counter-increment: li;
     content: counter(li);
   }
+
+
+  .btn {
+    font-family: "Rubik";
+}
