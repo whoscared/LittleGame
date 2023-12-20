@@ -1,0 +1,41 @@
+.test-img{
+    width: 23%;
+}
+
+.main {
+    margin-top: 115px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+.test-img{
+    width: 20%;
+}
+
+.body {
+    background-color: thistle;
+}
+
+.usernameForm {
+    font-family: "Akshar";
+}
+
+@font-face {
+    font-family: "Rubik";
+    src: url(../fonts/RubikSprayPaint-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Akshar";
+    src: url(../fonts/SawarabiGothic-Regular.ttf);
+}
+
+.btn {
+    font-family: "Rubik";
+}
