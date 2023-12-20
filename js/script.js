@@ -102,6 +102,7 @@ nextText.onclick = function() {
                 // localStorage.setItem('userResults', usersResultsJSON);
             }
     } else {
+        currentScore = 0;
         setNewTest();
     }
     // if (allQuestions[currentTest].readyQuestions[0] == true && 
@@ -370,39 +371,39 @@ function dragStart(event) {
     event.dataTransfer.setData('text/plain', draggableElement.textContent);
 };
 
-//Тест 2
+// //Тест 2
 
-//Как только контент загрузился добавляем для всех элементов второго теста исчезновение после клика
-document.addEventListener('DOMContentLoaded', function() {
-    var elements = document.querySelectorAll('img.test-2-item');
-        elements.forEach(function(element) {
-            element.addEventListener('click', function() {
-            //element.classList.add('one_click');
-            element.style.display = 'none';
-        });
-    });
+// //Как только контент загрузился добавляем для всех элементов второго теста исчезновение после клика
+// document.addEventListener('DOMContentLoaded', function() {
+//     var elements = document.querySelectorAll('img.test-2-item');
+//         elements.forEach(function(element) {
+//             element.addEventListener('click', function() {
+//             //element.classList.add('one_click');
+//             element.style.display = 'none';
+//         });
+//     });
     
-    //Добавляем очки при нажатии на объект с классом withA
-    var elements = document.querySelectorAll('img.withA');
-    elements.forEach(function(element) {
-        element.addEventListener('click', function() {
-            if (!(element.classList.contains('one_click_0')) && cuurentLevel == 0) {       
-                element.classList.add('one_click_0');
-                addScopeCount();
-            }
-        });
-    });
+//     //Добавляем очки при нажатии на объект с классом withA
+//     var elements = document.querySelectorAll('img.withA');
+//     elements.forEach(function(element) {
+//         element.addEventListener('click', function() {
+//             if (!(element.classList.contains('one_click_0')) && cuurentLevel == 0) {       
+//                 element.classList.add('one_click_0');
+//                 addScopeCount();
+//             }
+//         });
+//     });
 
-    var elements = document.querySelectorAll('img.food');
-    elements.forEach(function(element) {
-        element.addEventListener('click', function() {
-            if (!(element.classList.contains('one_click_1')) && cuurentLevel == 1) {
-                element.classList.add('one_click_1');
-                addScopeCount();
-            }
-        });
-    });
-});
+//     var elements = document.querySelectorAll('img.food');
+//     elements.forEach(function(element) {
+//         element.addEventListener('click', function() {
+//             if (!(element.classList.contains('one_click_1')) && cuurentLevel == 1) {
+//                 element.classList.add('one_click_1');
+//                 addScopeCount();
+//             }
+//         });
+//     });
+// });
 
 
 //Тест 3
