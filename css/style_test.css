@@ -65,22 +65,22 @@
 }
 
 .croco {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
+    height: auto;
     position: absolute;
 }
 
 .monkey {
-    width: 150px;
-    height: 150px;
+    max-width: 200px;
+    height: auto;
     position: absolute;
 }
 
 #croco-1 {
     bottom:40px;
     left:70px;
-    width: 305px;
-    height: 180px;
+    /* width: 305px;
+    height: 180px; */
 }
 
 #monkey-1 {
