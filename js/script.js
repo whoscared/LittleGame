@@ -7,7 +7,6 @@ let resultEnd = document.getElementById('result');
 let navbar = document.getElementById('navbar');
 let body = document.getElementById('body');
 let usernameInput = document.getElementById('username');
-//let username = usernameInput.value;
 let resultBtn = document.getElementById('result-form');
 let resultTable = document.getElementById('result_table');
 
