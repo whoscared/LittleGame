@@ -9,10 +9,8 @@ var result = document.getElementById('result');
 
 var userListElement = document.getElementById('userResultsList');
 
-// Clear any existing content in the list
 userListElement.innerHTML = '';
 
-// Iterate over the usersResults array and create list items
 for (var i = 0; i < usersResults.length; i++) {
   var user = usersResults[i];
   var listItem = document.createElement('li');
