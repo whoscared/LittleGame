@@ -14,9 +14,6 @@ let firstTest = document.getElementById('test-1');
 let secondTest = document.getElementById('test-2');
 let thirdTest = document.getElementById('test-3');
 
-
-//let secondTestItems = document.querySelectorAll('.withA');
-
 let allTests = [firstTest, secondTest, thirdTest];
 
 let testIsFlex = [false, true, true];
@@ -39,7 +36,6 @@ let allQuestions = [
     }
 ];
 
-//let allQuestions = ["Перетащите всех крокодилов в водоем", "Найдите все слова на букву А", "Перенесите все слова, начинающиеся с гласной в красный контейнер, с согласной - в синий"];
 let currentTest = -1;
 let cuurentLevel = 0;
 let maxScoreOnTests = [[3,3],[5,6],[8,8]];

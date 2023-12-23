@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    z-index: 1000;
 }
 
 .test-img {
@@ -74,38 +75,6 @@
     max-width: 200px;
     height: auto;
     position: absolute;
-}
-
-#croco-1 {
-    bottom:40px;
-    left:70px;
-    /* width: 305px;
-    height: 180px; */
-}
-
-#monkey-1 {
-    bottom: 40px;
-    right: 90px;
-}
-
-#croco-2{
-    top:80px;
-    left:10px;
-}
-
-#monkey-2 {
-    top: 73px;
-    left: 306px;
-}
-
-#croco-3 {
-    top: 280px;
-    right: 100px;
-}
-
-#monkey-3 {
-    top: 89px;
-    right: 0px;
 }
 
 #test-2 {

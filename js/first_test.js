@@ -19,7 +19,7 @@ function getRandomElements_Test1() {
     '" src="./img/test1/monkey-4.png">',
     '" src="./img/test1/monkey-5.png">',
     '" src="./img/test1/monkey-6.png">',
-    '" src="./img/test1/monkey-7.png">']
+    '" src="./img/test1/monkey-7.png">'];
 
     const availableStringsCroco = crocoImages.slice();
     const availableStringsMonkey = monkeyImages.slice();
@@ -45,6 +45,20 @@ function getRandomElements_Test1() {
 
     let resultAllImages = crocoResult + ' ' + monkeyResult;
     test1Images.innerHTML = `${resultAllImages}`;
+
+    let j = 1;
+    while (j < 4) {
+        let curCroco = document.getElementById('croco-' + j);
+        let curMonkey = document.getElementById('monkey-' + j);
+
+        curCroco.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
+        curCroco.style.top = Math.floor(Math.random() * (window.innerHeight - 100)) + 100  + 'px';
+
+        curMonkey.style.left = Math.floor(Math.random() * window.innerWidth) + 'px';
+        curMonkey.style.top = Math.floor(Math.random() * (window.innerHeight - 100)) + 100  + 'px';
+
+        j++;
+    }
   };
 
   //Drop с фиксацией позиции за мышкой
